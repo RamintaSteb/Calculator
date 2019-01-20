@@ -60,7 +60,7 @@ public class Calculator {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		//<-C
+		//<-C%
 		
 		JButton btnc1 = new JButton("<-");
 		btnc1.addActionListener(new ActionListener() {
@@ -76,7 +76,7 @@ public class Calculator {
 			}
 		});
 		btnc1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnc1.setBounds(12, 76, 120, 60);
+		btnc1.setBounds(12, 76, 91, 60);
 		frame.getContentPane().add(btnc1);
 		
 		JButton btnC = new JButton("C");
@@ -86,8 +86,20 @@ public class Calculator {
 			}
 		});
 		btnC.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnC.setBounds(138, 76, 120, 60);
+		btnC.setBounds(105, 76, 91, 60);
 		frame.getContentPane().add(btnC);
+				
+		JButton btnPr = new JButton("%");
+		btnPr.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				firstnum=Double.parseDouble(textField.getText());
+				textField.setText("");
+				operations = "%";
+			}
+		});
+		btnPr.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnPr.setBounds(198, 76, 60, 60);
+		frame.getContentPane().add(btnPr);
 		
 		//789+
 		
